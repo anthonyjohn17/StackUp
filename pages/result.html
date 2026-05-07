@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="John Anthony" />
+    <meta name="application-name" content="StackUp" />
+    <meta name="apple-mobile-web-app-title" content="StackUp" />
+    <meta property="og:title" content="StackUp" />
+    <meta property="og:site_name" content="StackUp" />
+    <title>StackUp</title>
+    <link rel="me" href="https://github.com/anthonyjohn17" />
+    <link
+      rel="icon"
+      href="../images/logo-stackup.svg?v=3"
+      type="image/svg+xml"
+    />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/style-result.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/style-footer.css" />
+
+    <!-- StackUp — Google Analytics (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-T7E23MRMSX"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-T7E23MRMSX");
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="container header-container">
+        <a href="../index.html">
+          <div class="logo-container">
+            <img
+              src="../images/logo-stackup.svg?v=3"
+              alt=""
+              width="32"
+              height="22"
+            />
+            <h3 class="site-title">StackUp</h3>
+          </div>
+        </a>
+
+        <nav class="navbar">
+          <a href="../index.html">Change salary</a>
+          <a href="../index.html">Compare</a>
+        </nav>
+
+        <div class="menu-icon">
+          <div class="menu-bar"></div>
+        </div>
+      </div>
+    </header>
+
+    <div class="profileImage-wrapper">
+      <div class="border-profile">
+        <img
+          class="profileImage"
+          src=""
+          alt="profile image of the Celebrities choosen"
+        />
+      </div>
+      <div class="price-tag"></div>
+    </div>
+
+    <div class="background-nav"></div>
+    <div class="intro-result">
+      <section class="main-title container semibold">
+        <h1 class="maintitle">
+          You vs <span class="star-name gold2"></span><br /><span
+            class="compare-title"
+            >Compare and Smile.</span
+          >
+        </h1>
+      </section>
+
+      <section class="section-video-intro">
+        <div class="vignette-overlay"></div>
+        <div id="videoContainer"></div>
+        <video
+          id="scroll-video"
+          preload="preload"
+          autobuffer="autobuffer"
+          muted
+        >
+          <source src="../videos/jet_riche.mp4" type="video/mp4" />
+          Your browser does not support HTML5 video.
+        </video>
+        <div class="text-vid semibold">
+          <h2 class="main-text-vid">
+            This private jet costs $50 million.<br /><span
+              class="star-name"
+            ></span>
+            could afford it in
+            <span id="buy-jet-time-star" class="gold3"></span>, you in
+            <span id="buy-jet-time" class="gold3"></span>...
+          </h2>
+          <p id="embark-jet" class="gold3 semibold">
+            let's embark on this high-fashion flight.
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <section class="container fract-value">
+      <p id="frac" class="gold2 semibold"></p>
+      <p class="explain-frac semibold">
+        Here's the fraction your wealth represents in comparison to
+        <span class="star-name"></span>
+      </p>
+    </section>
+
+    <section class="container graphs">
+      <div class="wrapper-donnut">
+        <p class="explain-donnut semibold">
+          This tiny sliver represents your
+          <span class="grey-text">monthly salary</span> in comparison to
+          <span class="star-name"></span>'s earnings. But don't worry, this is
+          only the start on StackUp.
+        </p>
+        <canvas id="donnut"></canvas>
+      </div>
+
+      <canvas id="barchart"></canvas>
+      <p class="explain-barchart medium grey-text">
+        GDP, or Gross Domestic Product, is the total value of all goods and
+        services produced within a country's borders in a specific time period,
+        serving as a broad measure of national economic activity.
+      </p>
+    </section>
+
+    <section class="bento">
+      <div class="transition-rec"></div>
+      <div class="container cards">
+        <div class="wrapper-cards-1 wrapper-cards" id="wrapper-cards-1">
+          <button class="rect-small clickable-rect">
+            <h2 class="gold semibold title-card time-to-earn"></h2>
+            <p class="text-card semibold">
+              is all it takes for <span class="star-name"></span> to earn your
+              monthly salary. <br /><span class="see-more normal"
+                >more<img src="../images/arrow.svg" alt="arrow icon"
+              /></span>
+            </p>
+            <img
+              class="icon-plus"
+              src="../images/plus_apple_gris.svg"
+              alt="icon plus"
+            />
+          </button>
+          <div class="rect-vertical">
+            <img
+              class="background-image-rect"
+              src="../images/watch-red.png"
+              alt="red suit and gold watch"
+            />
+          </div>
+          <div class="rect-small none-on-mobile">
+            <img
+              class="background-image-rect"
+              src="../images/maldive.png"
+              alt="landscape of maldive"
+            />
+          </div>
+        </div>
+
+        <div class="wrapper-cards-2 wrapper-cards">
+          <div class="rect-horizontal">
+            <div class="year-wrapper">
+              <p class="semibold since">Since</p>
+              <h2 class="gold semibold title-card" id="since-christ">75,000</h2>
+            </div>
+            <p class="text-card semibold christ">
+              <span class="grey-text">Before Christ</span> you'd need to work to
+              make what <span class="star-name"></span> earns in one year,
+              <span class="one-year-earn"></span>. That's way back, long before
+              humans even walked the Earth.
+            </p>
+          </div>
+          <div class="rect-square">
+            <img
+              class="background-image-rect"
+              src="../images/appart-max.png"
+              alt="beautiful appartment"
+            />
+          </div>
+          <div class="rect-square clickable-rect">
+            <h2 class="gold semibold title-card" id="size-appart">45m²</h2>
+            <p class="text-card semibold">
+              This is the size of an apartment you could afford in
+              <span class="grey-text">New York City</span>.
+              <span class="star-name"></span> could buy the half city of NYC.
+              <br /><span class="see-more normal"
+                >more<img src="../images/arrow.svg" alt="arrow icon"
+              /></span>
+            </p>
+            <img
+              class="icon-plus"
+              src="../images/plus_apple_gris.svg"
+              alt="icon plus"
+            />
+          </div>
+        </div>
+
+        <div class="wrapper-cards-3 wrapper-cards">
+          <div class="rect-vertical">
+            <img
+              class="background-image-rect"
+              src="../images/meclux.png"
+              alt="luxury guy"
+            />
+          </div>
+          <div class="rect-small third-pos">
+            <img
+              class="background-image-rect"
+              src="../images/iphonePic.jpg"
+              alt="landscape of skyscrapper"
+            />
+          </div>
+          <button class="rect-small clickable-rect">
+            <h2 class="gold semibold title-card nb-iphone"></h2>
+            <p class="text-card semibold">
+              this is how many <span class="grey-text">Iphone 15 Pro</span>
+              <span class="star-name"></span> can afford in 5 minutes
+            </p>
+            <img
+              class="icon-plus"
+              src="../images/plus_apple_gris.svg"
+              alt="icon plus"
+            />
+          </button>
+        </div>
+
+        <div class="wrapper-cards-2 wrapper-cards">
+          <div class="rect-horizontal">
+            <p class="text-card semibold christ">
+              If you give 20% of your salary to charity, that’s noble (<span
+                class="charity1"
+              ></span
+              >). <span class="star-name"></span> could
+              <span class="grey-text">reverse deforestation in the Amazon</span>
+              with the same percentage of his wealth (<span
+                class="charity2"
+              ></span
+              >).
+            </p>
+          </div>
+          <div class="rect-square clickable-rect third-pos">
+            <h2 class="gold semibold title-card" id="days-maldives">97 Days</h2>
+            <p class="text-card semibold">
+              that's how long you could stretch your savings for a dream
+              vacation in the Maldives. <span class="star-name"></span> could
+              last a staggering
+              <span class="grey-text" id="days-maldives-star">39,832,043</span>
+              days on his getaway. <br /><span class="see-more normal"
+                >more<img src="../images/arrow.svg" alt="arrow icon"
+              /></span>
+            </p>
+            <img
+              class="icon-plus"
+              src="../images/plus_apple_gris.svg"
+              alt="icon plus"
+            />
+          </div>
+          <div class="rect-square">
+            <img
+              class="background-image-rect"
+              src="../images/maldive2.png"
+              alt="beautiful landscape of a villa in maldive"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="popup container">
+      <div class="popup-wrapper">
+        <button class="close-popup">
+          <img src="../images/close-popup.svg" alt="icon for closing popup" />
+        </button>
+        <h3 class="subtitle-popup">⏳ Minutes to Millions</h3>
+        <h2 class="title-popup">
+          How fast <span class="star-name"></span> earns your salary.
+        </h2>
+        <p class="popup-content medium">
+          <span class="star-name"></span> takes
+          <span class="time-to-earn grey-text"></span> to earn your monthly
+          salary. <span class="grey-text time-to-earn-annual"></span> to earn
+          your annual salary. And
+          <span class="time-to-earn-life grey-text"></span> to earn everything
+          you will make in your lifetime. Assuming you work for 42 years, the
+          average for a worker.
+        </p>
+        <button class="continue-link medium">
+          Continue comparing <img src="../images/arrow.svg" alt="arrow icon" />
+        </button>
+      </div>
+
+      <div class="popup-wrapper">
+        <button class="close-popup">
+          <img src="../images/close-popup.svg" alt="icon for closing popup" />
+        </button>
+        <h3 class="subtitle-popup">🏠 Real Estate Comparison</h3>
+        <h2 class="title-popup">
+          Your NYC Apartment vs. <span class="star-name"></span>'s
+        </h2>
+        <p class="popup-content medium">
+          With your monthly income, you can afford roughly
+          <span class="size-appart-class"></span> in New York City, where real
+          estate prices can soar above $10,000 per square meter. Meanwhile,
+          <span class="star-name"></span>, with his fortune, could buy the half
+          of all NYC.
+        </p>
+        <button class="continue-link medium">
+          Continue comparing <img src="../images/arrow.svg" alt="arrow icon" />
+        </button>
+      </div>
+
+      <div class="popup-wrapper">
+        <button class="close-popup">
+          <img src="../images/close-popup.svg" alt="icon for closing popup" />
+        </button>
+        <h3 class="subtitle-popup">Dumb section 🚙🎮🥖</h3>
+        <h2 class="title-popup">(Un)necessary purchase</h2>
+        <p class="popup-content medium">
+          He can buy <span class="green-twingo grey-text"></span> green Twingos,
+          <span class="ps5 grey-text"></span> PS5s, and
+          <span class="baguette grey-text"></span> baguettes in 5 minutes —
+          because obviously, that’s the breakfast of champions.
+        </p>
+        <button class="continue-link medium">
+          Continue comparing <img src="../images/arrow.svg" alt="arrow icon" />
+        </button>
+      </div>
+
+      <div class="popup-wrapper">
+        <button class="close-popup">
+          <img src="../images/close-popup.svg" alt="icon for closing popup" />
+        </button>
+        <h3 class="subtitle-popup">🏝️ Dream Vacation</h3>
+        <h2 class="title-popup">Length of Stay in the Maldives</h2>
+        <p class="popup-content medium">
+          With <span class="grey-text">$500</span> a day, you could chill in the
+          Maldives for <span class="day-maldive-1 grey-text"></span> days.
+          <span class="star-name"></span>? He could stretch that to
+          <span class="day-maldive-2"></span> days, or a cool
+          <span class="day-maldive-3 grey-text"></span> years. Talk about a
+          permanent vacation!
+        </p>
+        <button class="continue-link medium">
+          Continue comparing <img src="../images/arrow.svg" alt="arrow icon" />
+        </button>
+      </div>
+      <div class="background-popup"></div>
+    </section>
+
+    <div class="wrapper-delimiteur container">
+      <div class="delimiteur"></div>
+    </div>
+
+    <section class="counter container semibold">
+      <div class="salary-counter gold2">
+        $<span id="salary-counter">0.00</span>
+      </div>
+      <div class="time-counter medium">
+        <span class="star-name"></span> has made this cool amount since you
+        started reading this article <br />
+        (<span id="time-counter">0</span>)
+      </div>
+      <br />
+      <p class="medium" id="youyou">
+        You ? Probably about <span class="grey-text">50 cents...</span>
+      </p>
+    </section>
+
+    <section class="replay container medium">
+      <button id="replay-button">
+        <a href="selection.html">Compare with another one</a>
+      </button>
+      <div class="pp-wrapper">
+        <a href="selection.html" class="pp-stars"
+          ><img
+            src="../images/profil/ronaldo.png"
+            alt="profil picture of stars for replay"
+        /></a>
+        <a href="selection.html" class="pp-stars"
+          ><img
+            src="../images/profil/cruise.png"
+            alt="profil picture of stars for replay"
+        /></a>
+        <a href="selection.html" class="pp-stars"
+          ><img
+            src="../images/profil/beast.png"
+            alt="profil picture of stars for replay"
+        /></a>
+        <a href="selection.html" class="pp-stars"
+          ><img
+            src="../images/profil/beyonce.png"
+            alt="profil picture of stars for replay"
+        /></a>
+      </div>
+    </section>
+
+    <footer class="semibold">
+      <div class="footer-wrapper container">
+        <div class="made-by-author">
+          Made with ♥ by
+          <a
+            class="creator-name"
+            href="https://github.com/anthonyjohn17"
+            rel="me noopener noreferrer"
+            target="_blank"
+            >John Anthony</a
+          >
+          <br />
+          <span class="normal grey-text explain-made"
+            >(and not with <b class="semibold">$</b> unfortunately)</span
+          >
+        </div>
+
+        <div class="footer-content">
+          <div>
+            <h3>About Us</h3>
+            <ul>
+              <li>
+                <a href="#" class="normal"
+                  >Our Story</a
+                >
+              </li>
+              <li>
+                <a href="#" class="normal"
+                  >Mission & Values</a
+                >
+              </li>
+              <li>
+                <a href="#" class="normal">Team</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3>Services</h3>
+            <ul>
+              <li>
+                <a href="#" class="normal"
+                  >Consulting</a
+                >
+              </li>
+              <li>
+                <a href="#" class="normal"
+                  >Development</a
+                >
+              </li>
+              <li>
+                <a href="#" class="normal"
+                  >Design</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3>Support</h3>
+            <ul>
+              <li>
+                <a href="#" class="normal"
+                  >Help Center</a
+                >
+              </li>
+              <li>
+                <a href="#" class="normal"
+                  >Contact Us</a
+                >
+              </li>
+              <li>
+                <a href="#" class="normal">FAQ</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3>Follow Us</h3>
+            <ul>
+              <li>
+                <a href="#" class="normal"
+                  >YouTube</a
+                >
+              </li>
+              <li>
+                <a href="#" class="normal"
+                  >Twitter</a
+                >
+              </li>
+              <li>
+                <a href="#" class="normal"
+                  >Instagram</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <a href="#"><img src="../images/ytb-icon.svg" alt="YouTube" /></a>
+          <a href="#"><img src="../images/twitter-icon.svg" alt="X" /></a>
+          <a
+            href="https://github.com/anthonyjohn17"
+            rel="noopener noreferrer"
+            target="_blank"
+            ><img src="../images/github-icon.png" alt="John Anthony on GitHub"
+          /></a>
+          <a href="#"><img src="../images/insta-icon.png" alt="Instagram" /></a>
+        </div>
+
+        <div class="sep-footer-wrapper">
+          <div class="sep-footer"></div>
+        </div>
+
+        <div class="goodbye-text">
+          <p>
+            You've still got a few minutes left on your coffee break to dream
+            about it. ☕️
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.0.7/countUp.umd.min.js"></script>
+  <script src="../js/result.js">
+    defer
+  </script>
+  <script src="../js/popup.js">
+    defer
+  </script>
+  <script src="../js/header.js">
+    defer
+  </script>
+  <script src="../js/fieldSalary.js">
+    defer
+  </script>
+  <script src="../js/graph.js">
+    defer
+  </script>
+</html>
+
+<!-- StackUp — CountUp library -->

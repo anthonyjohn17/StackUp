@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="John Anthony" />
+    <meta name="application-name" content="StackUp" />
+    <meta name="apple-mobile-web-app-title" content="StackUp" />
+    <meta property="og:title" content="StackUp" />
+    <meta property="og:site_name" content="StackUp" />
+    <title>StackUp</title>
+    <link rel="me" href="https://github.com/anthonyjohn17" />
+    <link
+      rel="icon"
+      href="/images/logo-stackup.svg?v=3"
+      type="image/svg+xml"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- StackUp — Google Analytics (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-T7E23MRMSX"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-T7E23MRMSX");
+    </script>
+  </head>
+  <body>
+    <header class="container">
+      <div class="logo-container">
+        <img
+          src="images/logo-stackup.svg?v=3"
+          alt=""
+          width="32"
+          height="22"
+        />
+        <h3 class="site-title">StackUp</h3>
+      </div>
+
+      <nav class="navbar">
+        <a href="#about">About</a>
+      </nav>
+      <div class="background-nav"></div>
+
+      <div class="menu-icon">
+        <div class="menu-bar"></div>
+      </div>
+    </header>
+	
+	<!--<img class="forfree" src="images/forfree.png" alt="handwritten free label" />-->
+    <div class="container main-content">
+      <h1 class="maintitle semibold">
+        Compare Your Earnings With<span class="semibold main-title gold">
+          <br />
+          Top Richest Celebrities</span
+        >
+      </h1>
+      <label class="switch">
+        <span class="currency-symbol">$</span>
+        <input type="checkbox" id="currency-check-box" />
+        <span class="slider round"></span>
+        <span class="currency-symbol">€</span>
+      </label>
+      <div class="salary-input-container">
+        <input
+          type="text"
+          id="salary"
+          placeholder="Enter your monthly Salary"
+          aria-label="Enter your monthly Salary"
+        />
+        <button id="button-compare">Compare</button>
+      </div>
+    </div>
+
+    <div class="badge-wrapper container">
+      <img src="images/forbes-badge.png" alt="badge of forbes" />
+      <img src="images/hunt-badge.png" alt="badge of product hunt" />
+    </div>
+
+    <div class="gradient">
+      <img src="images/gradient2.png" alt="gradient background" />
+    </div>
+
+    <div class="all-stars">
+      <img src="images/ronaldo.png" alt="ronaldo" />
+      <img src="images/bezos.png" alt="bezos" />
+      <img src="images/jenner.png" alt="jenner" />
+      <img src="images/gate.png" alt="bill gate" />
+      <img src="images/beyonce.png" alt="beyonce" />
+      <img src="images/dicap.png" alt="dicaprio" />
+      <img src="images/musk.png" alt="musk" />
+    </div>
+  </body>
+  <script src="js/landing.js"></script>
+</html>

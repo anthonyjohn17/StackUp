@@ -1,0 +1,268 @@
+
+/* Landing salary reminder in fixed header (selection page only) */
+.header-user-salary {
+	display: none;
+	flex: 1 1 auto;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 0.05rem;
+	min-width: 0;
+	padding: 0 0.5rem;
+	font-size: var(--fs-200);
+	line-height: 1.15;
+	text-align: center;
+	color: var(--almost-black);
+}
+
+.header-user-salary:not([hidden]) {
+	display: flex;
+}
+
+.header-user-salary-label {
+	opacity: 0.72;
+	display: block;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 100%;
+	font-size: 0.62rem;
+	letter-spacing: 0.02em;
+	text-transform: uppercase;
+}
+
+.header-user-salary-amount {
+	font-weight: 600;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 100%;
+	font-size: var(--fs-300);
+	color: inherit;
+}
+
+.container {
+	--max-width: 1215px;
+	--padding: 1rem;
+  
+	width: min(var(--max-width), 100% - (var(--padding) * 1.2));
+	margin-inline: auto;
+
+}
+
+.container2 {
+	--max-width: 1010px;
+	--padding: 1rem;
+  
+	width: min(var(--max-width), 100% - (var(--padding) * 1.2));
+	margin-inline: auto;
+
+}
+
+body{
+	height: 3000px;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+
+
+/*=====================================*/
+/*main title*/
+/*=====================================*/
+
+
+.main-title{
+	display: flex;
+	/*background-color: greenyellow;*/
+	text-align: center;
+	justify-content: center;
+	line-height: 4.175rem;
+	align-items: center;
+	flex-direction: column;
+	font-size: var(--fs-900);
+	margin-top: 6rem;
+}
+
+.select-title{
+	font-size: var(--fs-1000);
+}
+
+
+@media (max-width:50em){
+	.main-title{
+		line-height: 2.5rem;
+	}
+}
+
+/*=====================================*/
+/*search sort container*/
+/*=====================================*/
+
+
+.search-sort-container{
+	display: flex;
+	justify-content: space-between;
+	margin-top: var(--size-1000);
+	flex-wrap: wrap;
+	align-items: center;
+
+}
+
+#search-box{
+	background: url(../images/search-icon.svg) no-repeat scroll .66em .5em;
+	background-size: 1em;
+	flex: .3 0 23.5rem;
+	padding: 0.28125rem 0.65625rem;
+	padding-left:2.3em;
+	border: none;
+	color: var(--almost-black);
+	border-radius: 0.45rem;
+	box-shadow: 0px 0.75px 3.75px 0px rgba(0, 0, 0, 0.30), 0px 0px 0px 0.75px rgba(0, 0, 0, 0.05);
+}
+
+.select-wrapper{
+	position: relative;
+	display: inline-block;
+}
+
+#sort-select{
+	font-size: var(--fs-400);
+	padding: 0.20588rem 0rem 0.20588rem 0.48038rem;
+	padding-right: 2.5em;
+	-webkit-appearance: none; /* Safari */
+	-moz-appearance: none; /* Firefox */
+	appearance: none; /* Chromium + modern browsers */
+	background-image: url('../images/select-icon.svg'); /* Custom dropdown arrow */
+	background-repeat: no-repeat;
+	background-position: right 0.1rem top; /* Nudge arrow inset */
+	background-size: 2em;
+	border-radius: 0.34313rem;
+	border:none;
+	box-shadow: 0px 0.549px 2.745px 0px rgba(0, 0, 0, 0.30), 0px 0px 0px 0.549px rgba(0, 0, 0, 0.05);
+}
+
+.focused {
+    outline: 2px solid #007AFF80;
+}
+
+#search-box::placeholder { /* Most modern browsers support this */
+	color: rgba(0, 0, 0, 0.25);
+	opacity: 1; /* Normalize placeholder opacity across browsers */
+}
+
+@media (max-width:50em){
+	.search-sort-container{
+		align-items: center;
+		flex-direction: column-reverse;
+		gap: var(--size-500);
+	}
+
+	.select-wrapper{
+		flex: .3 0 90%;
+		width: 90%;
+	}
+
+	#sort-select{
+		flex: .3 0 90%;
+		width: 100%;
+	}
+
+	#search-box{
+		flex: .3 0 90%;
+		width: 90%;
+	}
+}
+
+/*=====================================*/
+/*Cards*/
+/*=====================================*/
+
+.cards{
+	margin-top: var(--size-600);
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	justify-content: center;
+}
+
+.card-wrapper {
+	height: min-content;
+	width: min-content;
+	position: relative;
+	padding: 1px; /* Hairline “border” via gap */
+	border-radius: 0.625rem;
+	background-color:  rgba(0, 0, 0, 0.25);
+}
+
+.card-wrapper:hover{
+	background: linear-gradient(121deg, #7D4702 -1.51%, #FDD265 57.83%, #683E08 102.06%);
+}
+	  
+
+.card{
+	background-color: var(--almost-white);
+	/*padding: 1.08rem 3.24rem 2.7rem 3.24rem;*/
+	padding: .6rem 1.8rem 1.5rem 1.8rem;
+
+	border-radius: 0.625rem;
+	flex: 0 1 calc(10% - 1rem); /* ~10 cards per row; 1rem accounts for gap */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.card-content{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.card-content .category{
+	margin-top: .8rem;
+	width: min-content;
+	height: min-content;
+	text-transform: uppercase;
+	padding: 0.4em 3em;
+	border-radius: 6.25rem;
+	color: white;
+	background: linear-gradient(180deg, #4B4B4B 0%, #000 100%);
+	font-size: var(--fs-300);
+}
+
+.card-content .name{
+	margin-top: 1.37rem;
+	font-size: 2.34rem;
+	color: var(--almost-black);
+	line-height: 2.25rem; /* 95.745% */
+}
+
+.card-content .net-worth{
+	margin-top: .8rem;
+	color: var(--black-grey);
+	font-size: 1.125rem;
+}
+
+.card-content .select-button{
+	margin-top: .8rem;
+	background-color: var(--blue-apple-text);
+	color: white;
+	border: none;
+	padding: 0.59rem 4.22rem;
+	border-radius: 0.5625rem;
+	cursor: pointer;
+}
+
+.card-content .select-button:hover{
+	opacity: .95;
+}
+
+.link-result-page{
+	text-decoration: none;
+}
+
+.card-image img{
+	height: 120px;
+}
