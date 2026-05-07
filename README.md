@@ -49,7 +49,6 @@ Net worth figures on cards are **illustrative snapshots** for UX (not audited va
 ├── js/                     # All client behavior
 ├── images/                 # UI assets (full celeb PNG set may vary by checkout)
 ├── serve-dev.py            # Tiny local server with cache-busting headers
-├── CNAME                   # Custom domain hint for GitHub Pages (currently stackup.app)
 ├── Repo-Overview.md       # Deeper architectural notes
 ├── LICENSE                 # MIT
 └── README.md               # You are here
@@ -74,8 +73,8 @@ Alternatively use any static server (VS Code Live Server, `npx serve`, etc.) roo
 ## Deployment (GitHub Pages)
 
 1. Push the repository to GitHub.
-2. Enable **Pages** (commonly publish from `/` on the default branch).
-3. Review **`CNAME`**: remove or rewrite if you use `*.github.io` or another domain.
+2. Enable **Pages** with source **branch `main`** and folder **`/` (root)**.
+3. The site is served at **`https://<user>.github.io/<repo>/`** (for example `https://anthonyjohn17.github.io/StackUp/`).
 4. Update or strip **Google Analytics** if you fork the repository.
 
 ---

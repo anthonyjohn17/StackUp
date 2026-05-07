@@ -8,7 +8,7 @@ See root `**README.md**` for portfolio context, deploy notes, and a concise chan
 
 **StackUp** is a **static, multi-page marketing / novelty web app** that lets someone enter a **monthly salary**, pick a **high-net-worth public figure** from a gallery, and land on a **rich comparison results page** with animations, charts, and playful “wealth gap” stats. The codebase uses **lots of imagery** (celebrity tiles, backgrounds, chart textures, badges); your local clone folder name may differ from the product name **StackUp**.
 
-There is **no backend**, **no package manifest** (`package.json`), and **no build step** in the tracked tree: it is **plain HTML + CSS + JavaScript**, suitable for static hosting (the root `**CNAME`** file contains `stackup.app`, which is typical of **GitHub Pages** with a custom domain). **License:** MIT — see `**LICENSE`** (copyright John Anthony).
+There is **no backend**, **no package manifest** (`package.json`), and **no build step** in the tracked tree: it is **plain HTML + CSS + JavaScript**, suitable for static hosting (for example **GitHub Pages** at **`https://<user>.github.io/<repo>/`**). **License:** MIT — see `**LICENSE`** (copyright John Anthony).
 
 ---
 
