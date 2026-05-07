@@ -8,6 +8,8 @@
 
 The hostname **stackup.app** is not this project’s hosting: it is a separate domain on the public internet (often sold or parked). Use the **github.io** link above so you reach this repository’s Pages deploy.
 
+**If you still land on a GoDaddy “for sale” page:** check the browser address bar. That page is **`stackup.app`** (or another parked domain), not GitHub. Only URLs starting with **`https://anthonyjohn17.github.io/StackUp`** are this site. Remove saved bookmarks or autofill entries for `stackup.app`, or try a private/incognito window and paste the **github.io** link directly.
+
 ---
 
 ## Architecture
