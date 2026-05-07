@@ -4,6 +4,10 @@
 
 [License: MIT](LICENSE)
 
+**Live site (GitHub Pages):** [https://anthonyjohn17.github.io/StackUp/](https://anthonyjohn17.github.io/StackUp/)
+
+The hostname **stackup.app** is not this project’s hosting: it is a separate domain on the public internet (often sold or parked). Use the **github.io** link above so you reach this repository’s Pages deploy.
+
 ---
 
 ## Architecture
